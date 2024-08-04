@@ -1,0 +1,364 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.content {
+    margin: 50px 60px;
+    padding: 20px;
+    background-color: rgb(227, 255, 151);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.content:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+#para1 {
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+#para2, #para3 {
+    margin: 20px 0;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.5s ease;
+}
+
+#para1:hover, #para2:hover, #para3:hover {
+    transform: scale(1.02);
+}
+
+#para1:hover {
+    color: #A612EC;
+}
+
+#para2:hover{
+    color: #00C2FF;
+} #para3:hover {
+    color: #62ff00;
+}
+
+.content p {
+    text-indent: 40px;
+}
+
+.navbar-custom {
+    background-color: #383f67;
+    border-radius: 0px;
+    border: 1px solid;
+    padding-left: 0;
+    margin: 0;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+#navbarNav {
+    margin-right: 50px;
+}
+
+
+.navbar-brand {
+    margin-left: 50px;
+    color: aliceblue;
+}
+
+.nav-link {
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff4500;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#head2 {
+    text-align: center;
+    margin-top: 50px;
+}
+#head3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.delayed-card-1, .delayed-card-2, .delayed-card-3, .delayed-card-4 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease, transform 1.5s ease;
+}
+
+.delayed-card-1.visible {
+    transition-delay: 0.3s;
+}
+
+.delayed-card-2.visible {
+    transition-delay: 0.3s;
+}
+
+.delayed-card-3.visible {
+    transition-delay: 0.3s;
+}
+
+.delayed-card-4.visible {
+    transition-delay: 0.3s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cards {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #000; /* Fallback color */
+}
+
+.cards-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards-img-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.cards-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1e90ff; /* Bright red */
+}
+
+.cards-text {
+    font-size: 18px;
+}
+
+.ecommerce-card {
+    width: 50%; /* Adjust width as needed */
+    height: auto;
+    right: 0%; 
+    left: 25%;/* Adjust height if necessary */
+}
+
+.ecommerce-card .cards-video {
+    width: 100%; /* Ensure the video fills the card width */
+    height: auto; /* Adjust the height proportionally */
+}
+
+/* Slide-in from bottom animation */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to Contact Us form */
+.contact-form {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: slideInFromBottom 1s ease-out; /* Apply animation */
+}
+
+/* Apply animation to Contact Info section */
+.contact-info {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: slideInFromBottom 1s ease-out; /* Apply animation */
+}
+
+/* Hover effects */
+.contact-form:hover {
+    border: 0.5px solid #a9d0f9; /* Change border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+
+.contact-info:hover {
+    background-color: #f8f9fa; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Add transition effects for visibility */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contact-info {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-info.visible {
+    opacity: 1;
+    transform: scale(1);
+    animation: popUp 0.5s ease forwards;
+}
+.cardvid1 {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 2s ease, opacity 1s ease;
+    transform: translateY(-300px); /* Initial position for animation */
+    opacity: 0; /* Initial opacity for animation */
+}
+
+.cardvid1-visible {
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Final opacity */
+}
+
+.cardvid1-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.cardvid1-video:hover {
+    transform: translateX(-50px); /* Moves video from right to left on hover */
+}
+
+.cardvid1-img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.cardvid1-title {
+    font-size: 24px;
+    color: red;
+}
+
+.cardvid1-text {
+    font-size: 18px;
+}
+/* Common styles for cards */
+.cards-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.cards-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cards-text {
+    font-size: 1rem;
+}
+
+/* Animation styles */
+.cardvid2, .cardvid3 {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.cardvid2 {
+    transform: translateX(-100%);
+}
+
+.cardvid3 {
+    transform: translateX(100%);
+}
+
+.cardvid2.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cardvid3.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content {
+    padding: 1.5rem; /* Bootstrap spacing for padding */
+    margin-top: 1.5rem; /* Bootstrap spacing for margin */
+}
+.content p {
+    margin-bottom: 1rem; /* Space between paragraphs */
+}
+.card-img-top {
+    border-radius: 20px; /* Custom border radius */
+    object-fit: cover; /* Ensure image covers the card */
+    width: 100%;
+    height: auto;
+}
+#para1 {
+    font-weight: bold; /* Custom bold style */
+}
